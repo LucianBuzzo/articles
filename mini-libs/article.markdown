@@ -1,13 +1,14 @@
-Why I wrote 8 tiny javascript libraries
+8 tiny javascript libraries
 =
 
 Like many developers, there a few javascript libraries that I use time and
-again. Time and again I find myself loading the full [jQuery][1] and
-[lodash][2], libraries only to use a handful of methods from each of them.
+again. I often find myself loading the full
+[jQuery](https://jquery.com/) and
+[lodash](https://lodash.com/), libraries only to use a handful of methods from each of them.
 I'd had it in my mind for a while to write a replacement library for lodash that would
 provide a few utility methods like array mapping and type checking but I had
 never really got around to actually doing anything. Last Friday I got into
-a little back and forth with our new team member [Chris Quinn][3] when he jokingly sent
+a little back and forth with our new team member Chris Quinn when he sent
 me a 3 line javascript "framework" that deleted cookies. It got me thinking, how
 many lines of code do you actually need to make a usable cookie library?  
 

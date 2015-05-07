@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<!-- typekit -->
+		<script type="text/javascript" src="http://use.typekit.net/tjt1wcj.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!-- /typekit -->
+
+		<title>Gravitywell</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="keywords" content="Design, How to, PHP, Version Control" />
+		<meta name="description" content="Painlessly deploying fields in drupal 7" />
+		<meta property="og:site_name" content="Gravitywell - Creative Digital Agency, Bristol, UK" />
+		<meta property="og:url" content="https://www.gravitywell.co.uk/latest/article-preview/162/" />
+		<meta property="og:title" content="Preview: How to painlessly deploy Drupal fields | Gravitywell" />
+		<meta property="og:description" content="Painlessly deploying fields in drupal 7" />
+		<meta property="og:image" content="/images/uploads/facebook-meta-thumbnails/deploy_box.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_GB" />
+
+		<link rel="stylesheet" type="text/css" media="screen" href="http://www.gravitywell.co.uk/assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://www.gravitywell.co.uk/assets/css/owl-carousel.css" />
+		<!-- <link rel="stylesheet" type="text/css" media="print" href="http://www.gravitywell.co.uk/assets/css/print.css" /> -->
+		<link rel="shortcut icon" type="image/x-icon" href="http://www.gravitywell.co.uk/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://www.gravitywell.co.uk/apple-touch-icon.png" />
+
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/lte-ie8.css" />
+		<![endif]-->
+
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/js.moderizer-2.8.3.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/js.bowser.min.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/js.retina.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery.response-nav.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/js.fast-click.js"></script>
+
+	</head>
+	<body id="top" class="latest latest-single-article">
+		<section class="master-container">
+			<aside class="hidden">
+				<p><strong>Accessibility links</strong></p>
+				<ul>
+					<li><a href="http://www.gravitywell.co.uk#navigation">Main navigation</a></li>
+					<li><a href="http://www.gravitywell.co.uk#content">Skip to Content</a></li>
+					<li><a href="http://www.gravitywell.co.uk#footer">Supplementary navigation</a></li>
+				</ul>
+			</aside>
+
+			<!-- header -->
+<header id="navigation" class="header">
+	<div class="content-container-full">
+		<a class="logo" href="/"><img class="full" src="http://www.gravitywell.co.uk/assets/images/_global/logo.png" alt="Gravitywell logo" /></a>
+
+		<nav class="navigation">
+			<ul>
+				<li class="hide"><a href="http://www.gravitywell.co.uk/">Home</a></li>
+				<li><a href="http://www.gravitywell.co.uk/work/">Work</a></li>
+				<li><a href="http://www.gravitywell.co.uk/team/">Team</a></li>
+				<li><a href="http://www.gravitywell.co.uk/studio/">Studio</a></li>
+				<li><a class="active" href="http://www.gravitywell.co.uk/latest/">Latest</a></li>
+				<li><a href="http://www.gravitywell.co.uk/contact/">Contact</a></li>
+				<li class="office-directions hide"><a href="https://goo.gl/maps/qvvv9?" target="_blank">Office directions</a></li>
+
+			</ul>
+		</nav>
+
+		<div class="social-media-container">
+			<p class="follow">Follow<span class="off-screen">: </span></p>
+
+			<ul class="social-media">
+				<li>
+					<a class="facebook" href="https://www.facebook.com/pages/Gravitywell/182246385120249" target="_blank">
+						<span class="off-screen">Click here to visit our Facebook page</span>
+						<span class="icon-facebook-in-circle"></span>
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/gravitywelluk" target="_blank">
+						<span class="off-screen">Click here to visit our Twitter profile</span>
+						<span class="icon-twitter-in-circle"></span>
+					</a>
+				</li>
+				<li>
+					<a class="instagram" href="https://instagram.com/gravitywelluk" target="_blank">
+						<span class="off-screen">Click here to visit our Instagram profile</span>
+						<span class="icon-instagram-in-circle"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- /header -->
+
+			<!-- page content -->
+			<div id="content" class="page-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="content-container">
+		<article class="article">
+			<h1 class="title">8 tiny javascript libraries</h1>
+<p>Like many developers, there a few javascript libraries that I use time and again. I often find myself loading the full <a href="https://jquery.com/">jQuery</a> and <a href="https://lodash.com/">lodash</a>, libraries only to use a handful of methods from each of them. I'd had it in my mind for a while to write a replacement library for lodash that would provide a few utility methods like array mapping and type checking but I had never really got around to actually doing anything. Last Friday I got into a little back and forth with our new team member Chris Quinn when he sent me a 3 line javascript &quot;framework&quot; that deleted cookies. It got me thinking, how many lines of code do you actually need to make a usable cookie library?</p>
+<p>Ideas started churning and I quickly hacked out a rough version of a tiny cookie library - it was pretty sloppy and didn't work particularly well, but I was captivated by the idea of seeing what else I come up with. I tried to get my fellow developers involved in a weekend hack, but my cries of &quot;Lib Wars!&quot; fell on deaf ears: this was going to be a solo mission.</p>
+<p>Over the bank holiday I wrote a further 7 javascript libraries. The goal was to keep them as small as possible, providing a knife edge of usefulness. I think some of them were a genuine success, other were pretty miserable failures. I learnt a lot about writing vanilla javascript and had a lot of fun. None of them have any documentation and are barely tested beyond the latest version of chrome (and even then I'm sure they're all pretty buggy). I though I'd detail what I learnt on each of them (warning: experienced JS devs may experience extended eye-rolling).</p>
+<h2 id="biscuit"><a href="https://bitbucket.org/snippets/gravitywell_ltd/y7KG">Biscuit</a></h2>
+<p>Biscuit is the finished version of the cookie lib that kicked it all off. The name was stolen from Chris in a friendly attempt to draw him into the failed &quot;Lib Wars&quot; hackathon. Embarrassingly, Biscuit exposed my terrible lack of understanding when it came to getting and setting cookies through javascript. From <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie">MDN</a></p>
+<blockquote>
+<p>document.cookie is an accessor property with native setter and getter functions, and consequently is not a data property with a value: what you write is not the same than you read, everything is always mediated by the JavaScript interpreter.</p>
+</blockquote>
+<p>When setting a cookie you need to assign a string value in the form <code>KEY=VALUE</code> to the document.cookie variable like so <code>document.cookie = 'foo=bar'</code>. Additional parameters can be added by appending them to the string, seperated by <code>;</code>. For example, to set a a cookie to the current domain that will apply to all paths you would use:</p>
+<pre><code>document.cookie = foo=bar; domain=mydomain.com; path=/</code></pre>
+<p>I'd previously only used the (excellent) <a href="https://github.com/carhartl/jquery-cookie">jquery-cookie</a> plugin, which conveniently wraps document.cookie manipulation into something a little easier to digest, so this was a bit of an eye-opener for me.. I think the finished product was a success, It's not very flexible but it does what it says on the tin.</p>
+<h2 id="balsa"><a href="https://bitbucket.org/snippets/gravitywell_ltd/97jq/js">Balsa</a></h2>
+<p>I have to hold my hands up and admit that I had already written a portion of this library, but I'm including it here because I finished it during my mini hack. The aim of Balsa was to provide my most used methods from the lodash library in a smaller package. The big headscratcher for me was figuring out how to write a function that provides methods that can be accessed through dot notation. The solution turned out to be surprisingly straightforward. After defining a function, simply attach methods to it using dot notation.</p>
+<pre><code>function myFunc() {
+  return &#39;foobar&#39;;
+}
+
+myFunc.hello = function() {
+  return &#39;world&#39;;
+}
+
+myFunc();
+// -&gt; foobar
+
+myFunc.hello();
+// -&gt; world</code></pre>
+<p>You could also assign methods to a function using brackets.</p>
+<pre><code>function multiply(x, y) {
+  return x * y;
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+var methods = [multiply, add];
+
+methods.forEach( function( method ) {
+  myFunc[method.name] = method;
+});
+
+myFunc.add(1, 1);
+// -&gt; 2
+
+myFunc.multiply(2, 2);
+// -&gt; 4</code></pre>
+<p>I'm definitely happy with how Balsa turned out and with some polish and testing I could see myself using it in a production site. Working on Balsa really upped my confidence with using function attributes (name, arguments etc) and methods like <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call()</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply()</code></a>.</p>
+<h2 id="awful"><a href="https://bitbucket.org/snippets/gravitywell_ltd/Kde5/awfuljs">Awful</a></h2>
+<p>A while ago I came across ther Stackoverflow question <a href="http://stackoverflow.com/questions/3434278/do-dom-tree-elements-with-ids-become-global-variables">Do DOM tree elements with ids become global variables?</a>. This highlighted the behaviour where giving an element an id attribute adds it to it's parent window element. E.g.</p>
+<pre><code>&lt;h1 id=&quot;title&quot;&gt;A page title&lt;/h1&gt;
+&lt;script&gt;
+  alert(window.title.innerText); // -&gt; &#39;A page title&#39;
+&lt;/script&gt;</code></pre>
+<p>I thought it would be fun to try and wrap this up into a data binding framework but it wasn't particularly successful. Changing the values of elements through the global namespace was already to easy - wrapping it in another javascript function just didn't make any sense. If you can come up with an interesting way to use this behaviour <a href="https://bitbucket.org/lbuzzo/awful-js/">send me a pull request</a>!.</p>
+<h2 id="pantry"><a href="https://bitbucket.org/snippets/gravitywell_ltd/q7ee/pantryjs-alternative-to-browserstorage">Pantry</a></h2>
+<p>This is a simple alternative to html5 storage that stores data as JSON in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/name"><code>window.name</code></a>. Writing Pantry was quick and fun, I didn't learn much but it was good exercise in writing concise functions. I'd be interested in doing some testing and seeing how practical this is as a lightweight method of storing small amounts of application data.</p>
+<h2 id="quentin"><a href="https://bitbucket.org/snippets/gravitywell_ltd/4qqb/quentinjs">Quentin</a></h2>
+<p>Recently I've found myself using jQuery for changing CSS classes and DOM traversal (<code>find</code>, <code>parents</code>, <code>children</code> etc). I wrote Quentin as a Replacement for jQuery that would provide these functions for me in a smaller package (2.4KB minified).<br />I used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"><code>querySelectorAll</code></a> to retrieve arrays of matched elements. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList">NodeList</a> returned is converted to an array which then has the Quentin methods applied to it.<br />I was keen to have jQuery style chaining of methods e.g:</p>
+<pre><code>$(&#39;ul&#39;).find(&#39;li&#39;).first().addClass(&#39;active&#39;)</code></pre>
+<p>This proved to be particularly tricky. My solution was to use a helper function to assign the Quentin methods to a provided collection. The chainable Quentin methods could then call this on an object before returning this. The helper function utilises &quot;<a href="https://javascriptweblog.wordpress.com/2010/04/05/curry-cooking-up-tastier-functions/">currying</a>&quot; with the help of a method borrowed from the handsome and generous <a href="https://javascriptweblog.wordpress.com/">Angus Croll</a>.</p>
+<pre><code>var methods = [
+  addClass, removeClass, hasClass, find, first, last, eq, data, siblings,
+  parent, children, toggleClass
+];
+
+function wrapMethods(collection) {
+  console.log(collection);
+  methods.forEach(function(method) {
+    collection[method.name] = method.curry(collection);
+  });
+  collection.find = find.curry(collection);
+  return collection;
+}</code></pre>
+<p>Its not particularly pretty or performant, but it does work! I will most likely revisit Quentin in the future and try to improve its processing speed.</p>
+<p>Overall I'm really pleased with how Quentin turned out. I really recommend trying out a jQuery-less approach to DOM selectors if you haven't before.</p>
+<h2 id="loadly"><a href="https://bitbucket.org/snippets/gravitywell_ltd/nEeB">Loadly</a></h2>
+<p>Loadly is inspired by <a href="http://glench.com/hash">Glen Chiacchieri</a> and the <a href="https://github.com/chriso/cli">cli</a> node module. It provides a progress bar and a spinner that are displayed in the browser's URL bar using a hash fragment. I experimented with using <code>document.title</code> to display the loader which also had some interesting effects.</p>
+<p>It's fun and hacky and probably shouldn't be used anywhere serious!</p>
+<h2 id="enbasic"><a href="https://bitbucket.org/snippets/gravitywell_ltd/bqzj">EnBasic</a></h2>
+<p><a href="http://ogden.basic-english.org/">Ogden's basic english</a> is a list of 850 words that, when learnt, <em>&quot;are sufficient for ordinary communication in idiomatic English&quot;</em>. The <a href="http://ogden.basic-english.org/word2000.html">combined word list</a> extends the original 850 words to around 2000, providing and approximate minimum standard English world list that, when learnt, should allow a student to proceed on their own without difficulty.<br />I liked the idea of building a tool that could check text content against this word list and &quot;mark&quot; words that are not considered <em>Basic English</em>. I could then replace these words with text that would, hopefully, be easier to understand for people whose first language is not English.<br />Regular expressions alongside the string methods <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/match"><code>match()</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/EXSLT/regexp/replace"><code>replace</code></a> were the key to making EnBasic work.<br />EnBasic is essentially a spelling checker and could be easily adapted to run checks against any list of words.</p>
+<h2 id="luigi"><a href="https://bitbucket.org/snippets/gravitywell_ltd/pqMk">Luigi</a></h2>
+<p>Luigi provides an itty bitty replacement for my most used jQuery ajax methods.<br />I was suprised at how simple it was to implement basic get requests in vanilla javascript. POST request were a little trickier, so I went with the straightforward method of sending payload data as JSON.</p>
+<pre><code>function post(url, data, callback) {
+  var req = new XMLHttpRequest();
+  req.onload = function() {
+    callback(req.responseText);
+  };
+  var segments = [];
+  req.open(&#39;post&#39;, url, true);
+  req.setRequestHeader(&#39;Content-Type&#39;, &#39;application\/json&#39;);
+  req.send(JSON.stringify(data));
+  return req;
+}</code></pre>
+<p>One of my favourite methods from Luigi us <code>pickHTML</code>. Its behaviour is very similar to <a href="https://api.jquery.com/load/"><code>jQuery.load()</code></a>, but simply returns the HTML string instead of inserting it into the DOM. The regex used in this method is sourced from the must read article <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> on MDN.</p>
+<pre><code>function pickHTML(html, elementId) {
+  var regexp = new RegExp(&quot;&lt;(?!\!)\\s*([^\\s&gt;]+)[^&gt;]*\\s+id\\=[\&quot;\&#39;]&quot; + elementId + &quot;[\&quot;\&#39;][^&gt;]*&gt;&quot; ,&quot;i&quot;);
+  var res = regexp.exec(html);
+  console.log(res);
+  return res ? (new RegExp(&#39;(?:(?:.(?!&lt;\\s*&#39; + res[1] + &#39;[^&gt;]*[&gt;]))*.?&lt;\\s*&#39; + res[1] + &#39;[^&gt;]*[&gt;](?:.(?!&lt;\\s*\/\\s*&#39; + res[1] + &#39;\\s*&gt;))*.?&lt;\\s*\/\\s*&#39; + res[1] + &#39;\\s*&gt;)*(?:.(?!&lt;\\s*\/\\s*&#39; + res[1] + &#39;\\s*&gt;))*.?&#39;, &#39;i&#39;)).exec(html.slice(html.indexOf(res[0]) + res[0].length))[0] || &#39;&#39; : &#39;&#39;;
+}</code></pre>
+<p>Browser support for Luigi seems pretty solid and I think with a little more work and polish it could be viable for production use.</p>
+<h2 id="thickframes"><a href="https://bitbucket.org/snippets/gravitywell_ltd/yLBA">ThickFrames</a></h2>
+<p>This was originally going to be a <a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">Shadow DOM</a> utility wrapper for web components until I saw the <a href="http://caniuse.com/#feat=shadowdom">caniuse.com</a> page for Shadow DOM. I wasn't keen on using a polyfill and I didn't want to use technology that wasn't implemented in the majority of browsers, so I went with iframes.<br />My first attempt looked something like this:</p>
+<pre><code>&lt;div data-role=&quot;frame&quot; data-source=&quot;some/component.html&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  function init(node) {
+    var nodes = toArray(document.querySelectorAll(&#39;[data-role=&quot;frame&quot;]&#39;));
+    nodes.forEach(function(node) {
+      node.innerHTML = &#39;&lt;iframe src=&quot;&#39; + node.dataset.source + &#39;&quot;&gt;&lt;/iframe&gt;&#39;;
+    });
+  }
+&lt;/script&gt;</code></pre>
+<p>This immediately presented three problems I wanted to solve: - Iframes are automatically set to a static width and height which screws up the page's layout and displays scrollbars everywhere. - Scripts inside the iframes can't access global variables in the parent window - CSS styles declared in the parent window don't get applied inside the iframes</p>
+<p>For the first issue, I wrote a small function that sets the iframe's height to that of it's internal <code>document</code> element's <code>scrollHeight</code> attribute. As the <code>scrollHeight</code> value can sometimes return a decimal value, I round it up and add 1 pixel to make sure we don't see any scroll bars.</p>
+<p>Injecting javascript global variables from the parent window and making them available on load had me stumped until I realized that I could create &quot;empty&quot; iframes by not giving them a <code>src</code> attribute (this is a method used by a lot of WYSIWYG editors to isolate styles). After creating the empty iframe I can access its <code>contentWindow</code> property and assign any variables I want before injecting HTML content using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write"><code>document.write()</code></a>.</p>
+<p>Applying CSS styles is a little bit brutal and involves using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode"><code>cloneNode()</code></a> to copy styles out of the parent window into the iframe, with any external files hopefully being server by the browser cache!</p>
+<p>I'm keen on continuing development on ThickFrames as I think it shows some promise. I definitely need to make a few changes, for example removing the use of <code>data-role</code> to prevent any unintentional conflict with the <a href="http://www.w3.org/TR/wai-aria/roles">ARIA role model</a>.</p>
+<p>All in all I had a bunch of fun writing all of these and the experience has deepened my understanding of front end web development and really boosted my confidence in writing javascript unaided by libraries.<br />I will continue to work on these as side projects, hopefully adding documentation and unit tests!</p>
+<p>Bitbucket repositories for all of the libraries I've talked about above are listed here:</p>
+<ul>
+<li><a href="https://bitbucket.org/lbuzzo/biscuit-js/">Biscuit</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/Balsa">Balsa</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/awful-js/">Awful</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/pantry-js/">Pantry</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/quentin-js/">Quentin</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/loadly-js">Loadly</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/enbasic-js">EnBasic</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/luigi-js">Luigi</a></li>
+<li><a href="https://bitbucket.org/lbuzzo/frames/">ThickFrames</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+							<aside class="article-author article-author-bio">
+					<p class="author-container"><span class="author">Author</span><span class="off-screen">:</span> <span class="author-name">Lucian Buzzo</span></p>
+					<div class="image">
+						<img class="full" src="http://www.gravitywell.co.uk/images/uploads/team/team-members/lucian_buzzo.jpg" alt="" />
+					</div>
+					<p class="bio">Full Stack Developer</p>
+				</aside>
+
+		</article>
+	</div>
+			</div>
+			<!-- /page content -->
+
+			<!-- footer -->
+<footer id="footer" class="footer">
+
+	<!-- main content -->
+	<div class="content-container-full main-content">
+
+		<aside class="top-container">
+			<a class="top" title="Click here to go back to the top of the page" href="#top">
+				<span class="off-screen">Click here to go back to the top of the page</span>
+			 	<span class="icon-arrow-thin-up"></span>
+			</a>
+		</aside>
+
+		<!-- social media -->
+		<aside class="social-nav-container">
+			<p class="share">Share<span class="off-screen">: </span></p>
+
+			<ul class="social-nav">
+				<li class="twitter">
+					<a title="Click here to share this on Twitter" href="https://twitter.com/home?status=Check+this+out%21+https%3A%2F%2Fwww.gravitywell.co.uk%2Flatest%2Farticle-preview%2F162" target="_blank">
+						<span class="off-screen">Click here to share this on Twitter</span>
+						<span class="icon-twitter-icon"></span>
+					</a>
+				</li>
+				<li class="facebook">
+					<a title="Click here to share this on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.gravitywell.co.uk/latest/article-preview/162" target="_blank">
+						<span class="off-screen">Click here to share this on Facebook</span>
+						<span class="icon-facebook-icon"></span>
+					</a>
+				</li>
+			</ul>
+		</aside>
+		<!-- /social media -->
+
+		<!-- contact container -->
+		<div class="contact-container">
+
+			<!-- contact -->
+			<div class="contact">
+				<p>+44 (0)117 379 0309</p>
+				<p><a class="fade" href="mailto:simon@gravitywell.co.uk">simon@gravitywell.co.uk</a></p>
+			</div>
+			<!-- /contact -->
+
+			<!-- address -->
+			<address class="address">
+				<p><span class="line">11 Colston Yard,</span> <span class="line">Colston Street,</span> <span class="line-2"><span class="line">Bristol,</span> <span class="line">BS1 5BD</span></span></p>
+				<p><a class="fade" href="https://goo.gl/maps/qvvv9" target="_blank">Office directions ></a></p>
+			</address>
+			<!-- /address -->
+
+		</div>
+		<!-- /contact container -->
+
+	</div>
+	<!-- /main content -->
+
+	<div class="copyright">
+		<div class="content-container">
+			<small class="smallprint">We are Bristol designers and developers, handcrafting websites, apps, brands and other digital solutions.</small>
+			<small class="smallprint">&copy; Gravitywell 2015 | Registered in England 09173389 | VAT Registered 194 0383 02</small>
+		</div>
+	</div>
+
+</footer>
+<!-- /footer -->
+		</section>
+
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery.grid-list.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery.vertical-align.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/js.owl.carousel.min.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery.cta.js"></script>
+		<script type="text/javascript" src="http://www.gravitywell.co.uk/assets/js/_global/jquery.misc-mouse-events.js"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<script type="text/javascript">
+			// Fast click initialize
+			$(function() {FastClick.attach(document.body);});
+
+			// Responsive nav initialize
+			$('.header').responseNav({
+				headerContent: $('.header .content-container-full'),
+				menuCloseBtn: true
+			});
+		</script>
+
+
+					<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-1662516-2', 'auto');
+				ga('send', 'pageview');
+			</script>
+			</body>
+</html>
