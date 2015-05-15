@@ -1,7 +1,7 @@
-8 tiny javascript libraries
+Here's 8 tiny Javascript libraries
 =
 
-Like many developers, there a few javascript libraries that I use time and
+Like many developers, I have a few Javascript libraries that turn to again and 
 again. I often find myself loading the full
 [jQuery](https://jquery.com/) and
 [lodash](https://lodash.com/), libraries only to use a handful of methods from each of them.
@@ -9,22 +9,22 @@ I'd had it in my mind for a while to write a replacement library for lodash that
 provide a few utility methods like array mapping and type checking but I had
 never really got around to actually doing anything. Last Friday I got into
 a little back and forth with our new team member Chris Quinn when he sent
-me a 3 line javascript "framework" that deleted cookies. It got me thinking, how
+me a 3 line Javascript "framework" that deleted cookies. It got me thinking, how
 many lines of code do you actually need to make a usable cookie library?  
 
 Ideas started churning and I quickly hacked out a rough version of a tiny cookie
 library - it was pretty sloppy and didn't work particularly well, but I was
-captivated by the idea of seeing what else I come up with. I tried to get my
+captivated by the idea of seeing what else I could come up with. I tried to get my
 fellow developers involved in a weekend hack, but my cries of "Lib Wars!" fell
 on deaf ears:  this was going to be a solo mission.  
 
-Over the bank holiday I wrote a further 7 javascript libraries. The goal was to keep them as small as
+Over the bank holiday I wrote a further 7 Javascript libraries. The goal was to keep them as small as
 possible, providing a knife edge of usefulness. I think some of them were
 a genuine success, other were pretty miserable failures. I learnt a lot about
-writing vanilla javascript and had a lot of fun. None of them have any
+writing vanilla Javascript and had a lot of fun. None of them have any
 documentation and are barely tested beyond the latest version of chrome (and
-even then I'm sure they're all pretty buggy). I though I'd detail what I learnt
-on each of them (warning: experienced JS devs may experience extended eye-rolling).
+even then I'm sure they're all pretty buggy). I thought I'd detail what I learnt
+on each of them here (warning: experienced JS devs may experience extended eye-rolling).
 
 [Biscuit](https://bitbucket.org/snippets/gravitywell_ltd/y7KG)
 -
@@ -32,12 +32,12 @@ on each of them (warning: experienced JS devs may experience extended eye-rollin
 Biscuit is the finished version of the cookie lib that kicked it all off. The
 name was stolen from Chris in a friendly attempt to draw him into the failed
 "Lib Wars" hackathon. Embarrassingly, Biscuit exposed my terrible lack of
-understanding when it came to getting and setting cookies through javascript.
+understanding when it came to getting and setting cookies through Javascript.
 From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
 
 >document.cookie is an accessor property with native setter and getter functions,
 >and consequently is not a data property with a value: what you write is not the
->same than you read, everything is always mediated by the JavaScript interpreter.
+>same [as when] you read, everything is always mediated by the JavaScript interpreter.
 
 When setting a cookie you need to assign a string value in the form `KEY=VALUE` to the document.cookie
 variable like so `document.cookie = 'foo=bar'`. Additional parameters can be
@@ -49,8 +49,8 @@ a cookie to the current domain that will apply to all paths you would use:
 I'd previously only used the (excellent)
 [jquery-cookie](https://github.com/carhartl/jquery-cookie) plugin, which
 conveniently wraps document.cookie manipulation into something a little easier
-to digest, so this was a bit of an eye-opener for me..
-I think the finished product was a success, It's not very flexible but it does
+to digest, so this was a bit of an eye-opener for me.
+I think the finished product was a success, it's not very flexible but it does
 what it says on the tin.
 
 
@@ -114,7 +114,7 @@ and
 [Awful](https://bitbucket.org/snippets/gravitywell_ltd/Kde5/awfuljs)
 -
 
-A while ago I came across ther Stackoverflow question [Do DOM tree elements with
+A while ago I came across their Stackoverflow question [Do DOM tree elements with
 ids become global
 variables?](http://stackoverflow.com/questions/3434278/do-dom-tree-elements-with-ids-become-global-variables).
 This highlighted the behaviour where giving an element an id attribute 
@@ -127,7 +127,7 @@ adds it to it's parent window element. E.g.
 
 I thought it would be fun to try and wrap this up into a data binding framework
 but it wasn't particularly successful. Changing the values of elements through
-the global namespace was already to easy - wrapping it in another javascript
+the global namespace was already too easy - wrapping it in another Javascript
 function just didn't make any sense. If you can come up with an interesting
 way to use this behaviour [send me a pull
 request](https://bitbucket.org/lbuzzo/awful-js/)!.
@@ -136,7 +136,7 @@ request](https://bitbucket.org/lbuzzo/awful-js/)!.
 [Pantry](https://bitbucket.org/snippets/gravitywell_ltd/q7ee/pantryjs-alternative-to-browserstorage)
 -
 
-This is a simple alternative to html5 storage that stores data as JSON in
+This is a simple alternative to HTML5 storage that stores data as JSON in
 [`window.name`](https://developer.mozilla.org/en-US/docs/Web/API/Window/name).
 Writing Pantry was quick and fun, I didn't learn much but it was good exercise
 in writing concise functions. I'd be interested in doing some testing and seeing
@@ -147,7 +147,7 @@ how practical this is as a lightweight method of storing small amounts of applic
 -
 
 Recently I've found myself using jQuery for changing CSS classes and DOM
-traversal (`find`, `parents`, `children` etc). I wrote Quentin as a Replacement
+traversal (`find`, `parents`, `children` etc). I wrote Quentin as a replacement
 for jQuery that would provide these functions for me in a smaller package (2.4KB minified).  
 I used
 [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
@@ -159,9 +159,10 @@ I was keen to have jQuery style chaining of methods e.g:
     $('ul').find('li').first().addClass('active')
 
 This proved to be particularly tricky. My solution was to use a helper function 
-to assign the Quentin methods to a provided collection. The chainable Quentin methods
-could then call this on an object before returning this. The helper function
-utilises
+to assign the Quentin methods to a provided collection. If the return value
+from the Quentin method could have other Quentin methods applied to it, then
+I use the helper to attach those functions before returning a value.
+The helper function utilises
 "[currying](https://javascriptweblog.wordpress.com/2010/04/05/curry-cooking-up-tastier-functions/)"
 with the help of a method borrowed from the handsome and generous [Angus
 Croll](https://javascriptweblog.wordpress.com/). 
@@ -180,7 +181,7 @@ Croll](https://javascriptweblog.wordpress.com/).
       return collection;
     }
 
-Its not particularly pretty or performant, but it does work! I will most likely 
+It's not particularly pretty or performant, but it does work! I will most likely 
 revisit Quentin in the future and try to improve its processing speed.  
 
 Overall I'm really pleased with how Quentin turned out. I really recommend
@@ -225,7 +226,7 @@ against any list of words.
 -
 
 Luigi provides an itty bitty replacement for my most used jQuery ajax methods.  
-I was suprised at how simple it was to implement basic get requests in vanilla javascript.
+I was suprised at how simple it was to implement basic get requests in vanilla Javascript.
 POST request were a little trickier, so I went with the straightforward method
 of sending payload data as JSON.
 
@@ -241,7 +242,7 @@ of sending payload data as JSON.
       return req;
     }
 
-One of my favourite methods from Luigi us `pickHTML`. Its behaviour is very 
+One of my favourite methods from Luigi is `pickHTML`. Its behaviour is very 
 similar to [`jQuery.load()`](https://api.jquery.com/load/), but simply returns
 the HTML string instead of inserting it into the DOM. The regex used in this
 method is sourced from the must read article [HTML in
@@ -281,17 +282,18 @@ My first attempt looked something like this:
     </script>
 
 This immediately presented three problems I wanted to solve:
-- Iframes are automatically set to a static width and height which screws up the
+
+- iframes are automatically set to a static width and height which screws up the
   page's layout and displays scrollbars everywhere.
 - Scripts inside the iframes can't access global variables in the parent window
 - CSS styles declared in the parent window don't get applied inside the iframes
 
-For the first issue, I wrote a small function that sets the iframe's height to that of it's internal 
+For the first issue, I wrote a small function that sets the iframe's height to that of its internal 
 `document` element's `scrollHeight` attribute. As the `scrollHeight` value can
 sometimes return a decimal value, I round it up and add 1 pixel to make sure we
 don't see any scroll bars.  
 
-Injecting javascript global variables from the parent window and making them
+Injecting Javascript global variables from the parent window and making them
 available on load had me stumped until I realized that I could create "empty"
 iframes by not giving them a `src` attribute (this is a method used by a lot of
 WYSIWYG editors to isolate styles). After creating the empty iframe I can access
@@ -302,9 +304,9 @@ HTML content using
 Applying CSS styles is a little bit brutal and involves using
 [`cloneNode()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
 to copy styles out of the parent window into the iframe, with any external files
-hopefully being server by the browser cache!  
+hopefully being served by the browser cache!  
 
-I'm keen on continuing development on ThickFrames as I think it shows some promise.
+I'm keen on continuing the development of ThickFrames as I think it shows some promise.
 I definitely need to make a few changes, for example removing the use of
 `data-role` to prevent any unintentional conflict with the [ARIA role
 model](http://www.w3.org/TR/wai-aria/roles).  
@@ -312,7 +314,7 @@ model](http://www.w3.org/TR/wai-aria/roles).
 
 All in all I had a bunch of fun writing all of these and the experience has 
 deepened my understanding of front end web development and really
-boosted my confidence in writing javascript unaided by libraries.  
+boosted my confidence in writing Javascript unaided by libraries.  
 I will continue to work on these as side projects, hopefully adding
 documentation and unit tests!
 
