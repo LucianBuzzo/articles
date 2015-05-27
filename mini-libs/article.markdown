@@ -1,4 +1,4 @@
-Here's 8 tiny Javascript libraries
+How to learn by writing bad Javascript
 =
 
 Like many developers, I have a few Javascript libraries that turn to again and 
